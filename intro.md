@@ -23,7 +23,7 @@ In this series of notes, we will explore fundamental networking concepts and key
 
 Now, let's delve into the key concepts related to socket programming:
 
-![][https://media.geeksforgeeks.org/wp-content/uploads/20220330131350/StatediagramforserverandclientmodelofSocketdrawio2-448x660.png]
+! [State diagram for server and client model of Socket] (https://media.geeksforgeeks.org/wp-content/uploads/20220330131350/StatediagramforserverandclientmodelofSocketdrawio2-448x660.png)
 
 ### 1. Socket Creation
 
