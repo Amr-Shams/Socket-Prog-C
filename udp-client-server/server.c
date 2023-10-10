@@ -10,6 +10,7 @@
 #include<sys/socket.h>
 #include<netinet/in.h>
 #include<unistd.h>
+#include<string.h>
 
 #define PORT 4444
 #define MAXLINE 1024
@@ -23,7 +24,6 @@ int main()
     int sockfd;
     char buffer[MAXLINE];
     socklen_t addlen;
-    char *message = "Hello Client";
     struct sockaddr_in servaddr, cliaddr;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
     servaddr.sin_port = htons(PORT);
@@ -36,10 +36,6 @@ int main()
     {
         printf("socket creation failed...\n");
         exit(0);
-    }
-    else 
-    {
-        printf("Socket successfully created..\n");
     }
     /**
      * @brief assign IP, PORT
@@ -60,11 +56,6 @@ int main()
     {
         printf("Server Exit...\n");
         break;
-    }
-    if(n < 6)
-    {
-        printf("Client : %s\n", buffer);
-        sendto(sockfd, message, MAXLINE, 0, (struct sockaddr*)&cliaddr, sizeof(cliaddr)); // send the response
     }
    }
     return 0;
